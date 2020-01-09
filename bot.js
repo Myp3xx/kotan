@@ -8,7 +8,7 @@ client.on('ready', () => {
 client.on("ready", () => {
     client.user.setPresence({
         game: { 
-            name: 'пиздец',
+            name: 'PIZDEC',
             type: 'PLAYING'
         },
         status: 'idle'
