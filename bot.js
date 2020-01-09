@@ -2,11 +2,11 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: 'казино бл@ть', type: 0 } });
+    client.user.setPresence({ game: { name: 'казино бл@ть | k.help', type: 0 } });
 });
 
 client.on('message', message => {
-    if (message.content === 'k.info') {
+    if (message.content === 'k.help') {
     	message.reply('Бот в разработке');
   	}
 });
