@@ -5,10 +5,6 @@ client.on('ready', () => {
     client.user.setPresence({ game: { name: 'ЧСВ', type: 0 }
 });
 
-client.on('ready', () => {
-    client.user.setStatus('dnd')
-});
-
 client.on('message', message => {
     if (message.content === 'Кто ты?') {
     	message.reply('Я бот');
