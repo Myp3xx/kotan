@@ -5,10 +5,10 @@ client.on('ready', () => {
     client.user.setPresence({ game: { name: 'казино бл[!]ть', type: 0 } });
 });
 
-client.on('message', message => {
-    if (message.content === 'k.help') {
-    	message.reply('Бот в разработке');
-  	}
+client.on("message", (message) => {
+if(message.content == "k.help"){
+		message.channel.send("> В разработке!");
+	}
 });
 
 // THIS  MUST  BE  THIS  WAY
