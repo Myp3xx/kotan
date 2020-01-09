@@ -5,6 +5,8 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
+client.user.setActivity('пиздец', { type: 'PLAYING' });
+
 client.on('message', message => {
     if (message.content === 'Кто ты?') {
     	message.reply('Я бот');
