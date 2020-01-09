@@ -1,13 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on('ready', () => {
-    client.user.setPresence({
-        game: { 
-            name: 'как теман дрочит',
-            type: 'WATCHING'
-        },
-        status: 'dnd'
+    client.on('ready', () => {
+        client.user.setPresence({ game: { name: 'Myp3uk' }, status: 'idle' })
+        console.log(`${client.user.username} is up and running!`);
     })
 });
 
