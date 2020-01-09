@@ -5,9 +5,9 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-bot.on('ready', () => {
-    bot.user.setStatus('available')
-    bot.user.setPresence({
+client.on('ready', () => {
+    client.user.setStatus('available')
+    client.user.setPresence({
         game: {
             name: 'пиздец',
             type: "STREAMING",
