@@ -15,7 +15,7 @@ if(command === "say") {
                 message.channel.send(sayMessage);
         }
 if(command === "help") {
-		message.channel.send("> k.ping - Проверка\n> k.serv - Наш сервер\n> k.mc - Халявная лицензия Minecraft\n> *Бот в разработке*");
+		message.channel.send("> k.ping - Проверка\n> k.serv - Наш сервер\n> k.mc - Халявная лицензия Minecraft\n> k.say - Сказать что-то от имени меня\n *Бот в разработке*");
 	}
 if(command === "ping") {
 		message.channel.send("> 🐾");
