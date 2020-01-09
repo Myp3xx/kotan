@@ -5,8 +5,7 @@ client.on('ready', () => {
     client.user.setStatus('dnd')
     client.user.setPresence({
         game: {
-            name: 'пиздец',
-            type: "PLAYING"
+            name: 'пиздец'
         }
     });
 });
