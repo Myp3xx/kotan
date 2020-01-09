@@ -16,7 +16,7 @@ if(message.content == "k.serv"){
 		message.author.send("https://discord.gg/qS7nza3");
 	}
 if(message.content == "k.mc"){
-		message.author.send("> Держи свой аккаунт:\n> ``braxtonian97@gmail.com:bmbbgk06``\n> (логин:пароль)\n> **Хочешь еще лицензию? Тогда тебе сюда - https://discord.gg/hMVQxwv**");
+		message.author.send("> Держи свой аккаунт:\n> ``braxtonian97@gmail.com:bmbbgk06``\n> (логин:пароль)\n> **Хочешь еще лицензию? Тогда тебе сюда - https://discord.gg/hMVQxwv **");
 	}
 });
 
