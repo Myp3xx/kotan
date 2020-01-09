@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: 'кошки-мышки', type: 0 } });
+    client.user.setPresence({ game: { name: 'k.help | Серверов: ${client.guilds.size}', type: 0 } });
 });
 
 client.on("message", (message) => {
