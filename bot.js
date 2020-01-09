@@ -6,8 +6,8 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.send('pong');
+    if (message.content === 'Кто ты?') {
+    	message.reply('Я бот');
   	}
 });
 
