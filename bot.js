@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on("message", (message) => {
 if(message.content == "k.help"){
-		message.channel.send("> k.ping - Проверка");
+		message.channel.send("> k.ping - Проверка\n> *В разработке*");
 	}
 if(message.content == "k.ping"){
 		message.channel.send("> 🐾");
