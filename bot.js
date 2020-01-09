@@ -5,7 +5,15 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.user.setActivity('пиздец', { type: 'PLAYING' });
+client.on("ready", () => {
+    client.user.setPresence({
+        game: { 
+            name: 'пиздец',
+            type: 'PLAYING'
+        },
+        status: 'idle'
+    })
+});
 
 client.on('message', message => {
     if (message.content === 'Кто ты?') {
