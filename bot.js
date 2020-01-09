@@ -11,5 +11,14 @@ client.on('message', message => {
   	}
 });
 
+bot.on('ready', () => {
+    bot.user.setStatus('available')
+    bot.user.setPresence({
+        game: {
+            name: 'пиздец',
+            type: "PLAYING",
+        }
+    });
+});
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
