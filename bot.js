@@ -7,10 +7,13 @@ client.on('ready', () => {
 
 client.on("message", (message) => {
 if(message.content == "k.help"){
-		message.channel.send("> k.ping - Проверка\n> -------------------------------\n> Создатель бота <@579336126133829645>");
+		message.channel.send("> k.ping - Проверка\n> k.mc - Халявная лицензия Minecraft\n> *Бот в разработке*");
 	}
 if(message.content == "k.ping"){
 		message.channel.send("> 🐾");
+	}
+if(message.content == "k.mc"){
+		message.author.send("https://discord.gg/hMVQxwv");
 	}
 });
 
