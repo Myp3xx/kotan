@@ -2,14 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    client.user.setStatus('dnd')
-    client.user.setPresence({
-        game: {
-            name: 'ЧСВ',
-            type: "PLAYING",
-            url: "https://www.twitch.tv/monstercat"
-        }
-    });
+    client.user.setPresence({ game: { name: 'ЧСВ', type: 0 } });
 });
 
 client.on('message', message => {
