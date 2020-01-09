@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    bot.user.setStatus('dnd')
-    bot.user.setPresence({
+    client.user.setStatus('dnd')
+    client.user.setPresence({
         game: {
             name: 'with depression',
             type: "STREAMING",
