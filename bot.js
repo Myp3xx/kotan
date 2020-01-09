@@ -15,6 +15,9 @@ if(message.content == "k.ping"){
 if(message.content == "k.mc"){
 		message.author.send("https://discord.gg/hMVQxwv");
 	}
+if(message.content == "<@664850581537685506>"){
+		message.channel.reply("напиши k.help");
+	}
 });
 
 // THIS  MUST  BE  THIS  WAY
