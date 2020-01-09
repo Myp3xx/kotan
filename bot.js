@@ -5,7 +5,9 @@ client.on('ready', () => {
     client.user.setStatus('dnd')
     client.user.setPresence({
         game: {
-            name: 'пиздец'
+            name: 'ЧСВ',
+            type: "PLAYING",
+            url: "https://www.twitch.tv/monstercat"
         }
     });
 });
