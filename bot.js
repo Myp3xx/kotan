@@ -3,20 +3,36 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: 'мурзuк#7793', type: 1 } });
+    client.user.setPresence({ game: { name: 'хрень какую-то', type: 0 } });
     client.user.setStatus('idle');
 });
 
 client.on("message", (message) => {
 const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
-if(command === "say") {
+if(command === "admin-say") {
                 const sayMessage = args.join(" ");
                 message.delete().catch(O_o=>{});  
                 message.channel.send(sayMessage);
+if(command === "setstatus-online") {
+    client.user.setStatus('online');
+        }
+if(command === "setstatus-idle") {
+    client.user.setStatus('idle');
+        }
+if(command === "setstatus-dnd") {
+    client.user.setStatus('dnd');
+        }
+if(command === "setstatus-invisible") {
+    client.user.setStatus('invisible');
+        }
+if(command === "setpresence") {
+                const sayMessage = args.join(" ");
+                message.delete().catch(O_o=>{});  
+    client.user.setPresence({ game: { name: sayMessage, type: 0 } });
         }
 if(command === "help") {
-		message.channel.send("> k.ping - Проверка\n> k.serv - Наш сервер\n> k.mc - Халявная лицензия Minecraft\n> k.say - Сказать что-то от имени меня\n *Бот в разработке*");
+		message.channel.send("> k.ping - Проверка\n> k.serv - Наш сервер\n> k.mc - Халявная лицензия Minecraft\n *Бот в разработке*");
 	}
 if(command === "ping") {
 		message.channel.send("> 🐾");
