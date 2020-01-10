@@ -3,7 +3,8 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: '[!] Made By мурзuк#7793', type: 0 } });
+    client.user.setPresence({ game: { name: 'мурзuк#7793', type: 1 } });
+    client.user.setStatus('idle');
 });
 
 client.on("message", (message) => {
