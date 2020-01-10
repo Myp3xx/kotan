@@ -61,7 +61,7 @@ if(command === "mc") {
 if(command === "ball") {
                 var facts = ["Да", "Нет", "Не знаю", "Думаю, что нет", "Может быть да"];
                 var fact = Math.floor(Math.random() * facts.length);
-                message.channel.send("> ${message.author}, \n> " + facts[fact]);
+                message.channel.send("> " + author.tag + "> \n> " + facts[fact]);
 	}
 });
 
