@@ -58,11 +58,6 @@ if(command === "serv") {
 if(command === "mc") {
 		message.author.send("> Держи свой аккаунт:\n> ``braxtonian97@gmail.com:bmbbgk06``\n> (логин:пароль)\n> **Хочешь еще лицензию? Тогда тебе сюда - https://discord.gg/hMVQxwv **");
 	}
-if(command === "ball") {
-                var facts = ["Да", "Нет", "Не знаю", "Думаю, что нет", "Может быть да"];
-                var fact = Math.floor(Math.random() * facts.length);
-                message.channel.reply(facts[fact]);
-	}
 });
 
 // THIS  MUST  BE  THIS  WAY
