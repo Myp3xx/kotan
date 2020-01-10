@@ -15,7 +15,6 @@ if(command === "admin.say") {
      message.delete().catch(O_o=>{});  
      message.channel.send(sayMessage);
         }
-        }
 if(command === "help") {
 		message.channel.send("> k.ping - Проверка\n> k.serv - Наш сервер\n> k.mc - Халявная лицензия Minecraft\n *Бот в разработке*");
 	}
