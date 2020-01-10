@@ -47,7 +47,7 @@ if(command === "admin.setwatch") {
      client.user.setPresence({ game: { name: sayMessage, type: 3 } });
         }
 if(command === "help") {
-		message.channel.send("> k.ping - Проверка\n> k.serv - Наш сервер\n> k.mc - Халявная лицензия Minecraft\n> k.ball - Шар предсказаний\n *Бот в разработке*");
+		message.channel.send("> k.ping - Проверка\n> k.serv - Наш сервер\n> k.mc - Халявная лицензия Minecraft\n *Бот в разработке*");
 	}
 if(command === "ping") {
 		message.channel.send("> 🐾");
@@ -58,10 +58,10 @@ if(command === "serv") {
 if(command === "mc") {
 		message.author.send("> Держи свой аккаунт:\n> ``braxtonian97@gmail.com:bmbbgk06``\n> (логин:пароль)\n> **Хочешь еще лицензию? Тогда тебе сюда - https://discord.gg/hMVQxwv **");
 	}
-if(command === "ball") {
-                var facts = ["Да", "Может быть", "Нет", "Скорее всего нет", "Звёзды говорят да", "Наверно нет", "Не знаю"];
+if(command === "randomtest") {
+                var facts = ["Да", "Нет", "Не знаю", "Думаю, что нет", "Может быть да"];
                 var fact = Math.floor(Math.random() * facts.length);
-                message.channel.send("> ${message.author.tag}, \n>"facts[fact]);
+                message.channel.reply(facts[fact]);
 	}
 });
 
