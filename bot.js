@@ -15,36 +15,6 @@ if(command === "admin.say") {
      message.delete().catch(O_o=>{});  
      message.channel.send(sayMessage);
         }
-if(command === "admin.setstatusonline") {
-     message.delete().catch(O_o=>{});  
-     client.user.setStatus('online');
-        }
-if(command === "admin.setstatusidle") {
-     message.delete().catch(O_o=>{});  
-     client.user.setStatus('idle');
-        }
-if(command === "admin.setstatusdnd") {
-     message.delete().catch(O_o=>{});  
-     client.user.setStatus('dnd');
-        }
-if(command === "admin.setstatusinvisible") {
-     message.delete().catch(O_o=>{});  
-     client.user.setStatus('invisible');
-        }
-if(command === "admin.setgame") {
-     const sayMessage = args.join(" ");
-     message.delete().catch(O_o=>{});  
-     client.user.setPresence({ game: { name: sayMessage, type: 0 } });
-        }
-if(command === "admin.setlisten") {
-     const sayMessage = args.join(" ");
-     message.delete().catch(O_o=>{});  
-     client.user.setPresence({ game: { name: sayMessage, type: 2 } });
-        }
-if(command === "admin.setwatch") {
-     const sayMessage = args.join(" ");
-     message.delete().catch(O_o=>{});  
-     client.user.setPresence({ game: { name: sayMessage, type: 3 } });
         }
 if(command === "help") {
 		message.channel.send("> k.ping - Проверка\n> k.serv - Наш сервер\n> k.mc - Халявная лицензия Minecraft\n *Бот в разработке*");
