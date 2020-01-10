@@ -10,31 +10,41 @@ client.on('ready', () => {
 client.on("message", (message) => {
 const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
-if(command === "admin-say") {
+if(command === "admin.say") {
      const sayMessage = args.join(" ");
      message.delete().catch(O_o=>{});  
      message.channel.send(sayMessage);
         }
-if(command === "setstatus-online") {
+if(command === "admin.setstatus online") {
      message.delete().catch(O_o=>{});  
      client.user.setStatus('online');
         }
-if(command === "setstatus-idle") {
+if(command === "admin.setstatus idle") {
      message.delete().catch(O_o=>{});  
      client.user.setStatus('idle');
         }
-if(command === "setstatus-dnd") {
+if(command === "admin.setstatus dnd") {
      message.delete().catch(O_o=>{});  
      client.user.setStatus('dnd');
         }
-if(command === "setstatus-invisible") {
+if(command === "admin.setstatus invisible") {
      message.delete().catch(O_o=>{});  
      client.user.setStatus('invisible');
         }
-if(command === "setpresence") {
+if(command === "admin.setgame") {
      const sayMessage = args.join(" ");
      message.delete().catch(O_o=>{});  
      client.user.setPresence({ game: { name: sayMessage, type: 0 } });
+        }
+if(command === "admin.setlisten") {
+     const sayMessage = args.join(" ");
+     message.delete().catch(O_o=>{});  
+     client.user.setPresence({ game: { name: sayMessage, type: 2 } });
+        }
+if(command === "admin.setwatch") {
+     const sayMessage = args.join(" ");
+     message.delete().catch(O_o=>{});  
+     client.user.setPresence({ game: { name: sayMessage, type: 3 } });
         }
 if(command === "help") {
 		message.channel.send("> k.ping - Проверка\n> k.serv - Наш сервер\n> k.mc - Халявная лицензия Minecraft\n *Бот в разработке*");
