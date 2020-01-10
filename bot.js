@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: 'PORTAL 3 (alpha v0.32)', type: 0 } });
+    client.user.setPresence({ game: { name: 'k.help', type: 0 } });
     client.user.setStatus('idle');
 });
 
@@ -16,21 +16,25 @@ if(command === "admin-say") {
      message.channel.send(sayMessage);
         }
 if(command === "setstatus-online") {
-    client.user.setStatus('online');
+     message.delete().catch(O_o=>{});  
+     client.user.setStatus('online');
         }
 if(command === "setstatus-idle") {
-    client.user.setStatus('idle');
+     message.delete().catch(O_o=>{});  
+     client.user.setStatus('idle');
         }
 if(command === "setstatus-dnd") {
-    client.user.setStatus('dnd');
+     message.delete().catch(O_o=>{});  
+     client.user.setStatus('dnd');
         }
 if(command === "setstatus-invisible") {
-    client.user.setStatus('invisible');
+     message.delete().catch(O_o=>{});  
+     client.user.setStatus('invisible');
         }
 if(command === "setpresence") {
-    const sayMessage = args.join(" ");
-    message.delete().catch(O_o=>{});  
-    client.user.setPresence({ game: { name: sayMessage, type: 0 } });
+     const sayMessage = args.join(" ");
+     message.delete().catch(O_o=>{});  
+     client.user.setPresence({ game: { name: sayMessage, type: 0 } });
         }
 if(command === "help") {
 		message.channel.send("> k.ping - Проверка\n> k.serv - Наш сервер\n> k.mc - Халявная лицензия Minecraft\n *Бот в разработке*");
