@@ -15,19 +15,19 @@ if(command === "admin.say") {
      message.delete().catch(O_o=>{});  
      message.channel.send(sayMessage);
         }
-if(command === "admin.setstatus online") {
+if(command === "admin.setstatusonline") {
      message.delete().catch(O_o=>{});  
      client.user.setStatus('online');
         }
-if(command === "admin.setstatus idle") {
+if(command === "admin.setstatusidle") {
      message.delete().catch(O_o=>{});  
      client.user.setStatus('idle');
         }
-if(command === "admin.setstatus dnd") {
+if(command === "admin.setstatusdnd") {
      message.delete().catch(O_o=>{});  
      client.user.setStatus('dnd');
         }
-if(command === "admin.setstatus invisible") {
+if(command === "admin.setstatusinvisible") {
      message.delete().catch(O_o=>{});  
      client.user.setStatus('invisible');
         }
