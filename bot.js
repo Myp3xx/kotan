@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: 'хрень какую-то', type: 0 } });
+    client.user.setPresence({ game: { name: 'PORTAL 3 (alpha v0.32)', type: 0 } });
     client.user.setStatus('idle');
 });
 
@@ -11,9 +11,10 @@ client.on("message", (message) => {
 const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 if(command === "admin-say") {
-                const sayMessage = args.join(" ");
-                message.delete().catch(O_o=>{});  
-                message.channel.send(sayMessage);
+     const sayMessage = args.join(" ");
+     message.delete().catch(O_o=>{});  
+     message.channel.send(sayMessage);
+        }
 if(command === "setstatus-online") {
     client.user.setStatus('online');
         }
@@ -27,8 +28,8 @@ if(command === "setstatus-invisible") {
     client.user.setStatus('invisible');
         }
 if(command === "setpresence") {
-                const sayMessage = args.join(" ");
-                message.delete().catch(O_o=>{});  
+    const sayMessage = args.join(" ");
+    message.delete().catch(O_o=>{});  
     client.user.setPresence({ game: { name: sayMessage, type: 0 } });
         }
 if(command === "help") {
