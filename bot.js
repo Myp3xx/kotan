@@ -19,8 +19,10 @@ if (command === 'testcmd') {
 	if (!args.length) {
 		return message.channel.send(`> ${message.author}\n> Нехватает аргументов команды`);
 	}
-
-	message.channel.send(`> ${message.author}, ${args[0]}`);
+	message.channel.send(`{embed: {
+  color: 3447003,
+  description: "${message.author}, ${args[0]}"
+});
         }
 });
 
