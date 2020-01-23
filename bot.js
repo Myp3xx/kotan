@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: 'k.help', type: 0 } });
+    client.user.setPresence({ game: { name: 'Скоро боновление! :з', type: 0 } });
     client.user.setStatus('idle');
 });
 
