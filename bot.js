@@ -21,7 +21,7 @@ if (command === 'testcmd') {
 	}
 	message.channel.send({embed: {
   color: 3447003,
-  description: "${message.author}, ${args[0]}"}})
+  description: `${message.author}, ${args[0]}`}})
         }
 });
 
