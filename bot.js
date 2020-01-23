@@ -15,13 +15,21 @@ if(command === "admin.saycmd") {
      message.delete().catch(O_o=>{});  
      message.channel.send(sayMessage);
         }
-if (command === 'testcmd') {
+if (command === 'punch') {
 	if (!args.length) {
 		return message.channel.send(`${message.author}, Нехватает аргументов команды`);
 	}
 	message.channel.send({embed: {
   color: 3447003,
-  description: `🤜 ${message.author} **ударил** ${args[0]}`}})
+  description: `🤜 | ${message.author} **ударил(а)** ${args[0]}`}})
+        }
+if (command === 'kill') {
+	if (!args.length) {
+		return message.channel.send(`${message.author}, Нехватает аргументов команды`);
+	}
+	message.channel.send({embed: {
+  color: 3447003,
+  description: `👟 | ${message.author} **кинул(а) валенок в** ${args[0]}`}})
         }
 });
 
