@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: 'Скоро обновление! :з', type: 0 } });
+    client.user.setPresence({ game: { name: 'обновление...', type: 3 } });
     client.user.setStatus('idle');
 });
 
@@ -15,12 +15,12 @@ if(command === "admin.saycmd") {
      message.delete().catch(O_o=>{});  
      message.channel.send(sayMessage);
         }
-if (command === 'args-info') {
+if (command === 'testcmd') {
 	if (!args.length) {
-		return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
+		return message.channel.send(`> ${message.author}\n> Нехватает аргументов команды`);
 	}
 
-	message.channel.send(`Arguments: ${args[0]}`);
+	message.channel.send(`> ${message.author}, ${args[0]}`);
         }
 });
 
