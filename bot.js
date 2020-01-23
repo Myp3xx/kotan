@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: 'МЯУ', type: 0 } });
+    client.user.setPresence({ game: { name: 'обновление...', type: 3 } });
     client.user.setStatus('idle');
 });
 
@@ -19,10 +19,8 @@ if (command === 'testcmd') {
 	if (!args.length) {
 		return message.channel.send(`> ${message.author}\n> Нехватает аргументов команды`);
 	}
-	message.channel.send({embed: {
-  color: 3447003,
-  description: "${message.author}, ${args[0]}"
-});
+
+	message.channel.send(`> ${message.author}, ${args[0]}`);
         }
 });
 
