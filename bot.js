@@ -20,11 +20,11 @@ if (command === 'punch') {
 	if (!args.length) {
 		return message.channel.send({embed: {
   color: ff0000,
-  description: "${message.author}, нехватает аргументов команды!"}});
+  description: `${message.author}, нехватает аргументов команды!`}})
 	}
 	message.channel.send({embed: {
   color: 3447003,
-  description: "${message.author} ударил ${args[0]}"}})
+  description: `${message.author} ударил ${args[0]}`}})
         }
 
 });
