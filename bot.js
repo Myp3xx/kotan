@@ -15,6 +15,7 @@ if(command === "admin.saycmd") {
      message.delete().catch(O_o=>{});  
      message.channel.send(sayMessage);
         }
+
 if (command === 'punch') {
 	if (!args.length) {
 		return message.channel.send(`${message.author}, Нехватает аргументов команды`);
@@ -23,7 +24,8 @@ if (command === 'punch') {
   color: 3447003,
   description: `🤜 | ${message.author} **ударил(а)** ${args[0]}`}})
         }
-if (command === 'kill') {
+
+if (command === 'valenok') {
 	if (!args.length) {
 		return message.channel.send(`${message.author}, Нехватает аргументов команды`);
 	}
@@ -31,6 +33,25 @@ if (command === 'kill') {
   color: 3447003,
   description: `👟 | ${message.author} **кинул(а) валенок в** ${args[0]}`}})
         }
+
+if (command === 'kill') {
+	if (!args.length) {
+		return message.channel.send(`${message.author}, Нехватает аргументов команды`);
+	}
+	message.channel.send({embed: {
+  color: 3447003,
+  description: `🔫 | ${message.author} **убил(а)** ${args[0]}`}})
+        }
+
+if (command === 'hug') {
+	if (!args.length) {
+		return message.channel.send(`${message.author}, Нехватает аргументов команды`);
+	}
+	message.channel.send({embed: {
+  color: 3447003,
+  description: `✨ | ${message.author} **обнял(а)** ${args[0]}`}})
+        }
+
 });
 
 // THIS  MUST  BE  THIS  WAY
