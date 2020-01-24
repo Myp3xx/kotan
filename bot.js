@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: 'обновление...', type: 3 } });
+    client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 3 } });
     client.user.setStatus('idle');
 });
 
@@ -62,9 +62,6 @@ if (command === 'kiss') {
         }
 
 if (command === 'vodka') {
-	if (!args.length) {
-		return message.channel.send(`${message.author}, Нехватает аргументов команды`);
-	}
 	message.channel.send({embed: {
   color: 3447003,
   description: `🍾 | ${message.author} **ушёл(шла) в запой**`}})
