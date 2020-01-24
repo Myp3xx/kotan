@@ -52,6 +52,23 @@ if (command === 'hug') {
   description: `✨ | ${message.author} **обнял(а)** ${args[0]}`}})
         }
 
+if (command === 'kiss') {
+	if (!args.length) {
+		return message.channel.send(`${message.author}, Нехватает аргументов команды`);
+	}
+	message.channel.send({embed: {
+  color: 3447003,
+  description: `💖 | ${message.author} **поцеловал(а)** ${args[0]}`}})
+        }
+
+if (command === 'vodka') {
+	if (!args.length) {
+		return message.channel.send(`${message.author}, Нехватает аргументов команды`);
+	}
+	message.channel.send({embed: {
+  color: 3447003,
+  description: `🍾 | ${message.author} **ушёл(шла) в запой**`}})
+        }
 });
 
 // THIS  MUST  BE  THIS  WAY
