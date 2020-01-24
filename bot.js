@@ -87,8 +87,8 @@ if (command === 'vodka') {
 
 if (command === 'invite') {
 	message.author.send({embed: {
-  color: 00ffff,
-  description: `https://discordapp.com/oauth2/authorize?client_id=664850581537685506&scope=bot&permissions=8`}})
+  color: 15844367,
+  description: "https://discordapp.com/oauth2/authorize?client_id=664850581537685506&scope=bot&permissions=8"}})
         }
 
 });
