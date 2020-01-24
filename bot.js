@@ -4,7 +4,19 @@ const config = require("./config.json");
 
 client.on('ready', () => {
     client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 3 } });
-    client.user.setStatus('idle');
+    client.user.setStatus('online');
+});
+
+client.on("guildCreate", guild => {
+  // This event triggers when the bot joins a guild.
+  console.log(`Меня добавили на ${guild.name} (id: ${guild.id})`);
+  client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 3 } });
+});
+
+client.on("guildDelete", guild => {
+  // this event triggers when the bot is removed from a guild.
+  console.log(`Меня удалили с ${guild.name} (id: ${guild.id})`);
+  client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 3 } });
 });
 
 client.on("message", (message) => {
