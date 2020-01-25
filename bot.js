@@ -102,26 +102,6 @@ if (command === 'nitro') {
 	message.author.send("https://discord.gift/" + randomstring)
         }
 
-if (command === '10nitro') {
-        var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-        var string_length = 16;
-        var randomstring = '';
-        for (var i=0; i<string_length; i++) {
-            var rnum = Math.floor(Math.random() * chars.length);
-            randomstring += chars.substring(rnum,rnum+1);
-        }
-	message.author.send("https://discord.gift/" + randomstring)
-	message.author.send("https://discord.gift/" + randomstring)
-	message.author.send("https://discord.gift/" + randomstring)
-	message.author.send("https://discord.gift/" + randomstring)
-	message.author.send("https://discord.gift/" + randomstring)
-	message.author.send("https://discord.gift/" + randomstring)
-	message.author.send("https://discord.gift/" + randomstring)
-	message.author.send("https://discord.gift/" + randomstring)
-	message.author.send("https://discord.gift/" + randomstring)
-	message.author.send("https://discord.gift/" + randomstring)
-        }
-
 });
 
 // THIS  MUST  BE  THIS  WAY
