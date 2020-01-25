@@ -3,20 +3,20 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 0 } });
-    client.user.setStatus('online');
+    client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 3 } });
+    client.user.setStatus('idle');
 });
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`Меня добавили на ${guild.name} (id: ${guild.id})`);
-  client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 0 } });
+  client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 3 } });
 });
 
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`Меня удалили с ${guild.name} (id: ${guild.id})`);
-  client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 0 } });
+  client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 3 } });
 });
 
 client.on("message", (message) => {
@@ -89,6 +89,12 @@ if (command === 'invite') {
 	message.author.send({embed: {
   color: 15844367,
   description: "https://discordapp.com/oauth2/authorize?client_id=664850581537685506&scope=bot&permissions=8"}})
+        }
+
+if (command === 'nitro') {
+        var randomstring = Math.random().toString(36).slice(-8);
+        }
+	message.channel.send(randomstring)
         }
 
 });
