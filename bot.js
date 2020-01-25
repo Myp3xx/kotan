@@ -100,6 +100,9 @@ if (command === 'nitro') {
             randomstring += chars.substring(rnum,rnum+1);
         }
 	message.author.send("https://discord.gift/" + randomstring)
+	message.author.send({embed: {
+  color: 15844367,
+  description: `**Почему не работает?**\nМы рандомно генерируем 16 букв и цифр, столько символов содержится в подарочных кодах\nМожет произойти __чудо__, и бот сгенерирует рабочее Нитро`}})
         }
 });
 
