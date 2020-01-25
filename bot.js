@@ -101,7 +101,6 @@ if (command === 'nitro') {
         }
 	message.author.send("https://discord.gift/" + randomstring)
         }
-
 });
 
 // THIS  MUST  BE  THIS  WAY
