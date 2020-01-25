@@ -92,8 +92,14 @@ if (command === 'invite') {
         }
 
 if (command === 'nitro') {
-        var randomstring = Math.random().toString(36).slice(-8);
-	message.channel.send(randomstring)
+        var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        var string_length = 16;
+        var randomstring = '';
+        for (var i=0; i<string_length; i++) {
+            var rnum = Math.floor(Math.random() * chars.length);
+            randomstring += chars.substring(rnum,rnum+1);
+        }
+	message.channel.send("https://discord.gift/" + randomstring)
         }
 
 });
