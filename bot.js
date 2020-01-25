@@ -31,7 +31,7 @@ if(command === "admin.saycmd") {
 if (command === 'help') {
 	message.channel.send({embed: {
   color: 3447003,
-  description: `__**Помощь по командам:**__\n\n**k.punch <упоминание>** - ударить\n**k.valenok <упоминание>** - кинуть валенок\n**k.kill <упоминание>** - убить\n**k.hug <упоминание>** - обнять\n**k.kiss <упоминание>** - поцеловать\n**k.vodka** - уйти в запой\n\n**k.nitro** - сгенерировать Discord Nitro\n**k.invite** - пригласить этого бота к себе на сервер\n\nРазработчик - **Мурзик#2020**`}})
+  description: `__**Помощь по командам:**__\n\n**k.punch <упоминание>** - ударить\n**k.valenok <упоминание>** - кинуть валенок\n**k.kill <упоминание>** - убить\n**k.hug <упоминание>** - обнять\n**k.kiss <упоминание>** - поцеловать\n**k.vodka** - уйти в запой\n\n**k.nitro** - сгенерировать Discord Nitro\n**k.invite** - пригласить этого бота к себе на сервер\n`}})
         }
 
 if (command === 'punch') {
@@ -88,7 +88,7 @@ if (command === 'vodka') {
 if (command === 'invite') {
 	message.author.send({embed: {
   color: 15844367,
-  description: "https://discordapp.com/oauth2/authorize?client_id=664850581537685506&scope=bot&permissions=8"}})
+  description: "https://discordapp.com/oauth2/authorize?client_id=664850581537685506&scope=bot&permissions=8"}} + "Загляни к нам на сервер :з\nhttps://discord.gg/hMVQxwv")
         }
 
 if (command === 'nitro') {
