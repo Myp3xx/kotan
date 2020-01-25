@@ -93,7 +93,6 @@ if (command === 'invite') {
 
 if (command === 'nitro') {
         var randomstring = Math.random().toString(36).slice(-8);
-        }
 	message.channel.send(randomstring)
         }
 
