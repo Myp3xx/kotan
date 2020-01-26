@@ -23,7 +23,7 @@ client.on("message", (message) => {
 const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 
-if(command === "admin.saycmd") {
+if(command === "say") {
      const sayMessage = args.join(" ");
      message.delete().catch(O_o=>{});  
      message.channel.send(sayMessage);
@@ -32,7 +32,7 @@ if(command === "admin.saycmd") {
 if (command === 'help') {
 	message.channel.send({embed: {
   color: 3447003,
-  description: `__**Помощь по командам:**__\n\n**k.punch <упоминание>** - ударить\n**k.valenok <упоминание>** - кинуть валенок\n**k.kill <упоминание>** - убить\n**k.hug <упоминание>** - обнять\n**k.kiss <упоминание>** - поцеловать\n**k.vodka** - уйти в запой\n**k.suicide** - совершить самоубийство\n\n**k.nitro** - сгенерировать Discord Nitro\n**k.invite** - пригласить этого бота к себе на сервер\n`}})
+  description: `__**Помощь по командам:**__\n\n**k.punch <упоминание>** - ударить\n**k.valenok <упоминание>** - кинуть валенок\n**k.kill <упоминание>** - убить\n**k.hug <упоминание>** - обнять\n**k.kiss <упоминание>** - поцеловать\n**k.vodka** - уйти в запой\n**k.suicide** - совершить самоубийство\n\n**k.say <сообщение>** - сказать что-либо\n**k.embed <сообщение>** - сказать что-либо в рамке\n**k.nitro** - сгенерировать Discord Nitro\n**k.invite** - пригласить этого бота к себе на сервер\n`}})
         }
 
 if (command === 'punch') {
