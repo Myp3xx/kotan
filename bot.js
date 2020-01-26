@@ -3,29 +3,25 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: `${client.guilds.size} 6 серверов`, type: 0 } });
-    client.user.setStatus('idle');
+    client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 0 } });
+    client.user.setStatus('online');
 });
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`Меня добавили на ${guild.name} (id: ${guild.id})`);
-  client.user.setPresence({ game: { name: `${client.guilds.size} 6 серверов`, type: 0 } });
+  client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 0 } });
 });
 
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`Меня удалили с ${guild.name} (id: ${guild.id})`);
-  client.user.setPresence({ game: { name: `${client.guilds.size} 6 серверов`, type: 0 } });
+  client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 0 } });
 });
 
 client.on("message", (message) => {
 const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
-
-if (msg.content === '<@664850581537685506>') {
-    msg.reply('``k.help``');
-        }
 
 if(command === "admin.saycmd") {
      const sayMessage = args.join(" ");
