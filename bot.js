@@ -94,6 +94,7 @@ if (command === 'suicide') {
 
 if (command === 'embed') {
      const sayEmbed = args.join(" ");
+        message.delete().catch(O_o=>{}); 
 	message.channel.send({embed: {
   color: 0,
   description: sayEmbed}})
