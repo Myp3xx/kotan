@@ -93,10 +93,13 @@ if (command === 'suicide') {
         }
 
 if (command === 'embed') {
-     const sayEmbed = args.join(" ");
+     const sayMessage = args.join(" ");
+	if (!args.length) {
+		return message.channel.send(`${message.author}, Нехватает аргументов команды`);
+	}
 	message.channel.send({embed: {
-  color: 0,
-  description: sayEmbed}})
+  color: ${args[0]},
+  description: sayMessage}})
         }
 
 if (command === 'invite') {
