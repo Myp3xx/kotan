@@ -92,11 +92,11 @@ if (command === 'suicide') {
   description: `🩸 | ${message.author} **самоубился(лась)**`}})
         }
 
-if (command === 'embed) {
-     const sayMessage = args.join(" ");
+if (command === 'embed') {
+     const sayEmbed = args.join(" ");
 	message.channel.send({embed: {
   color: 0,
-  description: sayMessage}})
+  description: sayEmbed}})
         }
 
 if (command === 'invite') {
