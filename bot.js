@@ -92,6 +92,16 @@ if (command === 'suicide') {
   description: `🩸 | ${message.author} **самоубился(лась)**`}})
         }
 
+if (command === 'embed) {
+     const sayMessage = args.join(" ");
+	if (!args.length) {
+		return message.channel.send(`${message.author}, Нехватает аргументов команды`);
+	}
+	message.channel.send({embed: {
+  color: ${args[0]},
+  description: sayMessage}})
+        }
+
 if (command === 'invite') {
 	message.author.send({embed: {
   color: 15844367,
