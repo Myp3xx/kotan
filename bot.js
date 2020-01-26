@@ -3,20 +3,20 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: `${client.guilds.size} котят | k.help`, type: 1 } });
+    client.user.setPresence({ game: { name: `🐾${client.guilds.size}🐾 | k.help`, type: 0 } });
     client.user.setStatus('idle');
 });
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`Меня добавили на ${guild.name} (id: ${guild.id})`);
-  client.user.setPresence({ game: { name: `${client.guilds.size} котят | k.help`, type: 1 } });
+  client.user.setPresence({ game: { name: `🐾${client.guilds.size}🐾 | k.help`, type: 0 } });
 });
 
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`Меня удалили с ${guild.name} (id: ${guild.id})`);
-  client.user.setPresence({ game: { name: `${client.guilds.size} котят | k.help`, type: 1 } });
+  client.user.setPresence({ game: { name: `🐾${client.guilds.size}🐾 | k.help`, type: 0 } });
 });
 
 client.on("message", (message) => {
@@ -88,7 +88,8 @@ if (command === 'vodka') {
 if (command === 'invite') {
 	message.author.send({embed: {
   color: 15844367,
-  description: "https://discordapp.com/oauth2/authorize?client_id=664850581537685506&scope=bot&permissions=8"}} + "Загляни к нам на сервер :з\nhttps://discord.gg/hMVQxwv")
+  description: "https://discordapp.com/oauth2/authorize?client_id=664850581537685506&scope=bot&permissions=8"}})
+	message.author.send("Загляни к нам на сервер :з\nhttps://discord.gg/hMVQxwv")
         }
 
 if (command === 'nitro') {
