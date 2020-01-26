@@ -94,11 +94,8 @@ if (command === 'suicide') {
 
 if (command === 'embed') {
      const sayEmbed = args.join(" ");
-	if (!args.length) {
-		return message.channel.send(`${message.author}, Нехватает аргументов команды`);
-	}
 	message.channel.send({embed: {
-  color: ${args[0]},
+  color: 0,
   description: sayEmbed}})
         }
 
