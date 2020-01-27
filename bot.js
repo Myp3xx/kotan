@@ -23,12 +23,10 @@ client.on("message", (message) => {
 const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 
-if(command === "say") {
-     if (member.hasPermission('ADMINISTRATOR', false, false)) {
+if(command === "admin.saycmd") {
      const sayMessage = args.join(" ");
      message.delete().catch(O_o=>{});  
      message.channel.send(sayMessage);
-        }
         }
 
 if (command === 'help') {
@@ -94,14 +92,12 @@ if (command === 'suicide') {
   description: `🩸 | ${message.author} **самоубился(лась)**`}})
         }
 
-if (command === 'embed') {
-     if (member.hasPermission('ADMINISTRATOR', false, false)) {
+if (command === 'admin.embedcmd') {
      const sayEmbed = args.join(" ");
         message.delete().catch(O_o=>{}); 
 	message.channel.send({embed: {
   color: 0,
   description: sayEmbed}})
-        }
         }
 
 if (command === 'invite') {
