@@ -4,7 +4,7 @@ const config = require("./config.json");
 
 client.on('ready', () => {
     client.user.setPresence({ game: { name: `k.help | ${client.guilds.size} серверов`, type: 0 } });
-    client.user.setStatus('online');
+    client.user.setStatus('idle');
 });
 
 client.on("guildCreate", guild => {
@@ -23,10 +23,12 @@ client.on("message", (message) => {
 const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 
-if(command === "admin.saycmd") {
+if(command === "say") {
+     if (member.hasPermission('ADMINISTRATOR', false, false)) {
      const sayMessage = args.join(" ");
      message.delete().catch(O_o=>{});  
      message.channel.send(sayMessage);
+        }
         }
 
 if (command === 'help') {
@@ -92,12 +94,14 @@ if (command === 'suicide') {
   description: `🩸 | ${message.author} **самоубился(лась)**`}})
         }
 
-if (command === 'admin.embedcmd') {
+if (command === 'embed') {
+     if (member.hasPermission('ADMINISTRATOR', false, false)) {
      const sayEmbed = args.join(" ");
         message.delete().catch(O_o=>{}); 
 	message.channel.send({embed: {
   color: 0,
   description: sayEmbed}})
+        }
         }
 
 if (command === 'invite') {
