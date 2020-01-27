@@ -3,27 +3,27 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 0 } });
+    client.user.setPresence({ game: { name: `k.help | ${client.guilds.size} серверов`, type: 0 } });
     client.user.setStatus('online');
 });
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`Меня добавили на ${guild.name} (id: ${guild.id})`);
-  client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 0 } });
+  client.user.setPresence({ game: { name: `k.help | ${client.guilds.size} серверов`, type: 0 } });
 });
 
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`Меня удалили с ${guild.name} (id: ${guild.id})`);
-  client.user.setPresence({ game: { name: `${client.guilds.size} серверов`, type: 0 } });
+  client.user.setPresence({ game: { name: `k.help | ${client.guilds.size} серверов`, type: 0 } });
 });
 
 client.on("message", (message) => {
 const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 
-if(command === "say") {
+if(command === "admin.saycmd") {
      const sayMessage = args.join(" ");
      message.delete().catch(O_o=>{});  
      message.channel.send(sayMessage);
@@ -32,7 +32,7 @@ if(command === "say") {
 if (command === 'help') {
 	message.channel.send({embed: {
   color: 3447003,
-  description: `__**Помощь по командам:**__\n\n**k.punch <упоминание>** - ударить\n**k.valenok <упоминание>** - кинуть валенок\n**k.kill <упоминание>** - убить\n**k.hug <упоминание>** - обнять\n**k.kiss <упоминание>** - поцеловать\n**k.vodka** - уйти в запой\n**k.suicide** - совершить самоубийство\n\n**k.say <сообщение>** - сказать что-либо\n**k.embed <сообщение>** - сказать что-либо в рамке\n**k.nitro** - сгенерировать Discord Nitro\n**k.invite** - пригласить этого бота к себе на сервер\n`}})
+  description: `__**Помощь по командам:**__\n\n**k.punch <упоминание>** - ударить\n**k.valenok <упоминание>** - кинуть валенок\n**k.kill <упоминание>** - убить\n**k.hug <упоминание>** - обнять\n**k.kiss <упоминание>** - поцеловать\n**k.vodka** - уйти в запой\n**k.suicide** - совершить самоубийство\n\n**k.nitro** - сгенерировать Discord Nitro\n**k.invite** - пригласить этого бота к себе на сервер\n`}})
         }
 
 if (command === 'punch') {
@@ -92,7 +92,7 @@ if (command === 'suicide') {
   description: `🩸 | ${message.author} **самоубился(лась)**`}})
         }
 
-if (command === 'embed') {
+if (command === 'admin.embedcmd') {
      const sayEmbed = args.join(" ");
         message.delete().catch(O_o=>{}); 
 	message.channel.send({embed: {
