@@ -3,20 +3,20 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: `k.help | ${client.guilds.size} серверов`, type: 0 } });
+    client.user.setPresence({ game: { name: `k.help | ${client.guilds.size} 🐾`, type: 0 } });
     client.user.setStatus('idle');
 });
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`Меня добавили на ${guild.name} (id: ${guild.id})`);
-  client.user.setPresence({ game: { name: `k.help | ${client.guilds.size} серверов`, type: 0 } });
+  client.user.setPresence({ game: { name: `k.help | ${client.guilds.size} 🐾`, type: 0 } });
 });
 
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`Меня удалили с ${guild.name} (id: ${guild.id})`);
-  client.user.setPresence({ game: { name: `k.help | ${client.guilds.size} серверов`, type: 0 } });
+  client.user.setPresence({ game: { name: `k.help | ${client.guilds.size} 🐾`, type: 0 } });
 });
 
 client.on("message", (message) => {
@@ -32,7 +32,7 @@ if(command === "admin.saycmd") {
 if (command === 'help') {
 	message.channel.send({embed: {
   color: 3447003,
-  description: `__**Помощь по командам:**__\n\n**k.punch <упоминание>** - ударить\n**k.valenok <упоминание>** - кинуть валенок\n**[NEW] k.taburet <упоминание>** - ударить табуретом\n**k.kill <упоминание>** - убить\n**k.hug <упоминание>** - обнять\n**k.kiss <упоминание>** - поцеловать\n**k.vodka** - уйти в запой\n**k.suicide** - совершить самоубийство\n\n**k.nitro** - сгенерировать Discord Nitro\n**k.invite** - пригласить этого бота к себе на сервер\n`}})
+  description: `🐾 __**Помощь по командам:**__\n\n**k.punch <упоминание>** - ударить\n**k.valenok <упоминание>** - кинуть валенок\n**k.taburet <упоминание>** - ударить табуретом\n**k.kill <упоминание>** - убить\n**k.hug <упоминание>** - обнять\n**k.kiss <упоминание>** - поцеловать\n**k.vodka** - уйти в запой\n**k.suicide** - совершить самоубийство\n\n**k.nitro** - сгенерировать Discord Nitro\n**k.invite** - пригласить этого бота к себе на сервер\n`}})
         }
 
 if (command === 'punch') {
