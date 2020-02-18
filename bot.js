@@ -29,25 +29,6 @@ if(command === "admin.saycmd") {
      message.channel.send(sayMessage);
         }
 
-if (msg.content === 'мурзик') {
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        message.author.send('СПАМ АТТАКА');
-        }
-
 if (command === 'help') {
 	message.channel.send({embed: {
   color: 3447003,
