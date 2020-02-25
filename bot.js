@@ -38,7 +38,7 @@ if (command === 'help') {
 if (command === 'info') {
 	message.channel.send({embed: {
   color: 3447003,
-  description: `🐾 __**Информация:**__\nКол-во серверов: ${client.guilds.size}\nВерсия бота: v1.7.0 от 12.02.2020\nСервер разрабочика: Код приглашения 6CbwR7M`}})
+  description: `🐾 __**Информация:**__\n\nКол-во серверов: ${client.guilds.size}\nВерсия бота: v1.7.1 от 25.02.2020\nСервер разрабочика: Код приглашения 6CbwR7M`}})
         }
 
 if (command === 'punch') {
@@ -74,7 +74,7 @@ if (command === 'kill') {
 	}
 	message.channel.send({embed: {
   color: 3447003,
-  description: `🔫 | ${message.author} **убил(а)** ${args[0]}`}})
+  description: `🔪 | ${message.author} **убил(а)** ${args[0]}`}})
         }
 
 if (command === 'hug') {
