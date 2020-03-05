@@ -23,7 +23,7 @@ client.on("message", (message) => {
 const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 
-if(command === "admin.saycmd") {
+if(command === "admin.saycmd1") {
      const sayMessage = args.join(" ");
      message.delete().catch(O_o=>{});  
      message.channel.send(sayMessage);
@@ -143,7 +143,7 @@ if (command === 'suicide') {
   description: `🩸 | ${message.author} **самоубился(лась)**`}})
         }
 
-if (command === 'admin.embedcmd') {
+if (command === 'admin.embedcmd1') {
      const sayEmbed = args.join(" ");
         message.delete().catch(O_o=>{}); 
 	message.channel.send({embed: {
