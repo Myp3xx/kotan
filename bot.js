@@ -33,15 +33,9 @@ if (command === 'help') {
 const embed = new Discord.RichEmbed()
   .setTitle("Помощь по командам")
   .setColor(0x00AE86)
-  .setDescription("**k.punch <@упоминание>** - ударить\n**k.valenok <@упоминание>** - кинуть валенок\n**k.taburet <@упоминание>** - ударить табуретом\n**k.kill <@упоминание>** - убить\n**k.hug <@упоминание>** - обнять\n**k.kiss <@упоминание>** - поцеловать\n**k.poke <@упоминание>** - тыкнуть\n**k.pat <@упоминание>** - погладить\n**k.lick <@упоминание>** - лизнуть\n**k.bite <@упоминание>** - укусить\n**k.vodka** - уйти в запой\n**k.suicide** - совершить самоубийство\n\n**k.nitro** - сгенерировать Discord Nitro\n**k.info** - информация о боте\n**k.invite** - пригласить этого бота к себе на сервер")
+  .setDescription("**k.punch <@упоминание>** - ударить\n**k.valenok <@упоминание>** - кинуть валенок\n**k.taburet <@упоминание>** - ударить табуретом\n**k.kill <@упоминание>** - убить\n**k.hug <@упоминание>** - обнять\n**k.kiss <@упоминание>** - поцеловать\n**k.poke <@упоминание>** - тыкнуть\n**k.pat <@упоминание>** - погладить\n**k.lick <@упоминание>** - лизнуть\n**k.bite <@упоминание>** - укусить\n**k.vodka** - уйти в запой\n**k.suicide** - совершить самоубийство\n\n**k.nitro** - сгенерировать Discord Nitro\n**k.invite** - пригласить этого бота к себе на сервер")
   .setFooter("Разработчик - мурзuк#3585")
   message.channel.send({embed});
-        }
-
-if (command === 'info') {
-	message.channel.send({embed: {
-  color: 3447003,
-  description: `🐾 __**Информация:**__\n\nКол-во серверов: ${client.guilds.size}\nВерсия бота: v1.7.1 от 25.02.2020\nСервер разрабочика: Код приглашения 6CbwR7M`}})
         }
 
 if (command === 'punch') {
@@ -180,10 +174,27 @@ if (command === 'nitro') {
             var rnum = Math.floor(Math.random() * chars.length);
             randomstring += chars.substring(rnum,rnum+1);
         }
-	message.author.send("https://discord.gift/" + randomstring)
-	message.author.send({embed: {
-  color: 15844367,
-  description: `**Почему не работает?**\nМы рандомно генерируем 16 букв и цифр, столько символов содержится в подарочных кодах\nМожет произойти __чудо__, и бот сгенерирует рабочее Nitro`}})
+        var randomstring2 = '';
+        for (var i=0; i<string_length; i++) {
+            var rnum = Math.floor(Math.random() * chars.length);
+            randomstring += chars.substring(rnum,rnum+1);
+        }
+        var randomstring3 = '';
+        for (var i=0; i<string_length; i++) {
+            var rnum = Math.floor(Math.random() * chars.length);
+            randomstring += chars.substring(rnum,rnum+1);
+        }
+        var randomstring4 = '';
+        for (var i=0; i<string_length; i++) {
+            var rnum = Math.floor(Math.random() * chars.length);
+            randomstring += chars.substring(rnum,rnum+1);
+        }
+        var randomstring5 = '';
+        for (var i=0; i<string_length; i++) {
+            var rnum = Math.floor(Math.random() * chars.length);
+            randomstring += chars.substring(rnum,rnum+1);
+        }
+	message.author.send("https://discord.gift/" + randomstring + "\nhttps://discord.gift/" + randomstring2 + "\nhttps://discord.gift/" + randomstring3 + "\nhttps://discord.gift/" + randomstring4 + "\nhttps://discord.gift/" + randomstring5)
         }
 });
 
