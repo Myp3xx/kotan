@@ -194,7 +194,11 @@ if (command === 'nitro') {
             var rnum = Math.floor(Math.random() * chars.length);
             randomstring += chars.substring(rnum,rnum+1);
         }
-	message.author.send("https://discord.gift/" + randomstring + "\nhttps://discord.gift/" + randomstring2 + "\nhttps://discord.gift/" + randomstring3 + "\nhttps://discord.gift/" + randomstring4 + "\nhttps://discord.gift/" + randomstring5)
+	message.author.send("https://discord.gift/" + randomstring)
+	message.author.send("https://discord.gift/" + randomstring2)
+	message.author.send("https://discord.gift/" + randomstring3)
+	message.author.send("https://discord.gift/" + randomstring4)
+	message.author.send("https://discord.gift/" + randomstring5)
         }
 });
 
