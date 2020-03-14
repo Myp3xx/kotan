@@ -30,9 +30,12 @@ if(command === "admin.saycmd1") {
         }
 
 if (command === 'help') {
-	message.channel.send({embed: {
-  color: 3447003,
-  description: `🐾 __**Помощь по командам:**__\n\n**k.punch <@упоминание>** - ударить\n**k.valenok <@упоминание>** - кинуть валенок\n**k.taburet <@упоминание>** - ударить табуретом\n**k.kill <@упоминание>** - убить\n**k.hug <@упоминание>** - обнять\n**k.kiss <@упоминание>** - поцеловать\n**k.poke <@упоминание>** - тыкнуть\n**k.pat <@упоминание>** - погладить\n**k.lick <@упоминание>** - лизнуть\n**k.bite <@упоминание>** - укусить\n**k.vodka** - уйти в запой\n**k.suicide** - совершить самоубийство\n\n**k.nitro** - сгенерировать Discord Nitro\n**k.info** - информация о боте\n**k.invite** - пригласить этого бота к себе на сервер\n`}})
+const embed = new Discord.RichEmbed()
+  .setTitle("Помощь по командам")
+  .setColor(0x00AE86)
+  .setDescription("**k.punch <@упоминание>** - ударить\n**k.valenok <@упоминание>** - кинуть валенок\n**k.taburet <@упоминание>** - ударить табуретом\n**k.kill <@упоминание>** - убить\n**k.hug <@упоминание>** - обнять\n**k.kiss <@упоминание>** - поцеловать\n**k.poke <@упоминание>** - тыкнуть\n**k.pat <@упоминание>** - погладить\n**k.lick <@упоминание>** - лизнуть\n**k.bite <@упоминание>** - укусить\n**k.vodka** - уйти в запой\n**k.suicide** - совершить самоубийство\n\n**k.nitro** - сгенерировать Discord Nitro\n**k.info** - информация о боте\n**k.invite** - пригласить этого бота к себе на сервер")
+  .setFooter("Разработчик - мурзuк#3585")
+  message.channel.send({embed});
         }
 
 if (command === 'info') {
@@ -147,31 +150,18 @@ if (command === 'embedcmd1') {
 const embed = new Discord.RichEmbed()
   .setTitle("This is your title, it can hold 256 characters")
   .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
-  /*
-   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-   */
   .setColor(0x00AE86)
   .setDescription("This is the main body of text, it can hold 2048 characters.")
   .setFooter("This is the footer text, it can hold 2048 characters", "http://i.imgur.com/w1vhFSR.png")
   .setImage("http://i.imgur.com/yVpymuV.png")
   .setThumbnail("http://i.imgur.com/p2qNFag.png")
-  /*
-   * Takes a Date object, defaults to current date.
-   */
   .setTimestamp()
   .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
   .addField("This is a field title, it can hold 256 characters",
     "This is a field value, it can hold 1024 characters.")
-  /*
-   * Inline fields may not display as inline if the thumbnail and/or image is too big.
-   */
   .addField("Inline Field", "They can also be inline.", true)
-  /*
-   * Blank field, useful to create some space.
-   */
   .addBlankField(true)
   .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
- 
   message.channel.send({embed});
         }
 
