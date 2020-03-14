@@ -174,31 +174,7 @@ if (command === 'nitro') {
             var rnum = Math.floor(Math.random() * chars.length);
             randomstring += chars.substring(rnum,rnum+1);
         }
-        var randomstring2 = '';
-        for (var i=0; i<string_length; i++) {
-            var rnum = Math.floor(Math.random() * chars.length);
-            randomstring += chars.substring(rnum,rnum+1);
-        }
-        var randomstring3 = '';
-        for (var i=0; i<string_length; i++) {
-            var rnum = Math.floor(Math.random() * chars.length);
-            randomstring += chars.substring(rnum,rnum+1);
-        }
-        var randomstring4 = '';
-        for (var i=0; i<string_length; i++) {
-            var rnum = Math.floor(Math.random() * chars.length);
-            randomstring += chars.substring(rnum,rnum+1);
-        }
-        var randomstring5 = '';
-        for (var i=0; i<string_length; i++) {
-            var rnum = Math.floor(Math.random() * chars.length);
-            randomstring += chars.substring(rnum,rnum+1);
-        }
 	message.author.send("https://discord.gift/" + randomstring)
-	message.author.send("https://discord.gift/" + randomstring2)
-	message.author.send("https://discord.gift/" + randomstring3)
-	message.author.send("https://discord.gift/" + randomstring4)
-	message.author.send("https://discord.gift/" + randomstring5)
         }
 });
 
