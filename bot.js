@@ -140,6 +140,14 @@ if (command === 'suicide') {
   description: `🩸 | ${message.author} **самоубился(лась)**`}})
         }
 
+if (command === 'embed') {
+	if (!args.length) {
+		return message.channel.send(`${message.author}, Нехватает аргументов команды`);
+	}
+  .setColor(${args[0]})
+  .setDescription("${args[1]}")
+        }
+
 if (command === 'embedcmd1') {
 const embed = new Discord.RichEmbed()
   .setTitle("This is your title, it can hold 256 characters")
