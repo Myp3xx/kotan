@@ -144,8 +144,10 @@ if (command === 'embed') {
 	if (!args.length) {
 		return message.channel.send(`${message.author}, Нехватает аргументов команды`);
 	}
+  const embed = new Discord.RichEmbed()
   .setColor(${args[0]})
   .setDescription("${args[1]}")
+  message.channel.send({embed});
         }
 
 if (command === 'embedcmd1') {
