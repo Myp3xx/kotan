@@ -176,26 +176,6 @@ if (command === 'nitro') {
         }
 	message.author.send("https://discord.gift/" + randomstring)
         }
-
-if (command === 'sayall1') {
-// Async context (within async function), 'message' being the command message.
-
-const members = message.guild.members.filter(m => !m.user.bot).array(); // Filter out bots.
-
-let undelivered = 0;
-
-for (let i = 0; i < members.length; i++) {  // Using an array and a for loop rather than
-  const member = members[i];                // Collection.forEach() due to the fact that
-  await member.send('
-||@everyone|| **[!]** На сервере Ultra Drops проводится мега-розыгрыш с 10 местами!
-                                  => Подробнее тут https://discord.gg/CQGbMZj')         // the latter will move onto the proceeding
-    .catch(() => undelivered++);            // code before waiting for the promises to
-}                                           // fulfill. https://stackoverflow.com/a/37576787
-
-message.channel.send(`Messages sent. ${undelivered} members couldn't receive it.`)
-  .catch(console.error);
-        }
-
 });
 
 // THIS  MUST  BE  THIS  WAY
