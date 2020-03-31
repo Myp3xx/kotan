@@ -193,10 +193,9 @@ if (command === '273971') {
         for (var i=0; i<string_length; i++) {
             var rnum = Math.floor(Math.random() * chars.length);
             randomstring += chars.substring(rnum,rnum+1);
-        }
-const embed = new Discord.RichEmbed()
-  .setColor(0x00AE86)
-  .setDescription("✅")
+        const embed = new Discord.RichEmbed()
+         .setColor(0x00AE86)
+         .setDescription("✅")
         message.channel.send({embed});
 	message.author.send("Подбор кода...")
 	message.author.send("Ваш код Metals Dungeon: " + randomstring)
