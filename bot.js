@@ -34,7 +34,7 @@ const embed = new Discord.RichEmbed()
   .setTitle("Помощь по командам")
   .setColor(0x00AE86)
   .setDescription("**k.punch <@упоминание>** - ударить\n**k.valenok <@упоминание>** - кинуть валенок\n**k.taburet <@упоминание>** - ударить табуретом\n**k.kill <@упоминание>** - убить\n**k.hug <@упоминание>** - обнять\n**k.kiss <@упоминание>** - поцеловать\n**k.poke <@упоминание>** - тыкнуть\n**k.pat <@упоминание>** - погладить\n**k.lick <@упоминание>** - лизнуть\n**k.bite <@упоминание>** - укусить\n**k.ox <@упоминание>** - быкануть\n**k.vodka** - уйти в запой\n**k.suicide** - совершить самоубийство\n\n**k.nitro** - сгенерировать Discord Nitro\n**k.invite** - пригласить этого бота к себе на сервер")
-  .setFooter("Разработчик - мурзuк#3585")
+  .setFooter("🐾 Версия бота v0.8 (от 31.03.2020)")
   message.channel.send({embed});
         }
 
@@ -185,23 +185,6 @@ if (command === 'nitro') {
         }
 	message.author.send("https://discord.gift/" + randomstring)
         }
-
-if (command === '273971') {
-        var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-        var string_length = 22;
-        var randomstring = '';
-        for (var i=0; i<string_length; i++) {
-            var rnum = Math.floor(Math.random() * chars.length);
-            randomstring += chars.substring(rnum,rnum+1);
-	}
-        const embed = new Discord.RichEmbed()
-         .setColor(0x00AE86)
-         .setDescription("✅")
-        message.channel.send({embed});
-	message.author.send("Подбор кода...")
-	message.author.send("Ваш код Metals Dungeon: " + randomstring)
-        }
-
 });
 
 // THIS  MUST  BE  THIS  WAY
