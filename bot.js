@@ -193,6 +193,7 @@ if (command === '273971') {
         for (var i=0; i<string_length; i++) {
             var rnum = Math.floor(Math.random() * chars.length);
             randomstring += chars.substring(rnum,rnum+1);
+	}
         const embed = new Discord.RichEmbed()
          .setColor(0x00AE86)
          .setDescription("✅")
