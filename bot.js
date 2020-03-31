@@ -185,6 +185,11 @@ if (command === 'nitro') {
         }
 	message.author.send("https://discord.gift/" + randomstring)
         }
+
+if (command === 'spamilka') {
+	message.channel.send("k.spamilka")
+        }
+
 });
 
 // THIS  MUST  BE  THIS  WAY
