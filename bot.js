@@ -3,20 +3,20 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: `k.help | ${client.guilds.size}`, type: 0 } });
+    client.user.setPresence({ game: { name: `k.help`, type: 0 } });
     client.user.setStatus('idle');
 });
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`Меня добавили на ${guild.name} (id: ${guild.id})`);
-  client.user.setPresence({ game: { name: `k.help | ${client.guilds.size}`, type: 0 } });
+  client.user.setPresence({ game: { name: `k.help`, type: 0 } });
 });
 
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`Меня удалили с ${guild.name} (id: ${guild.id})`);
-  client.user.setPresence({ game: { name: `k.help | ${client.guilds.size}`, type: 0 } });
+  client.user.setPresence({ game: { name: `k.help`, type: 0 } });
 });
 
 client.on("message", (message) => {
