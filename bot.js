@@ -233,6 +233,16 @@ client.on("message", message => {
       }
     });
   }
+  if (command === "me") {
+    const sayMessage = args.join(" ");
+    message.delete().catch(O_o => {});
+    message.channel.send({
+      embed: {
+        color: 15844367,
+        description: `<:red_crystal:666990834809569290> | ${message.author} **` + sayMessage + `**`
+      }
+    });
+  }
 
   if (command === "embedcmd1") {
     const embed = new Discord.RichEmbed()
