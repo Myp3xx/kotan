@@ -235,7 +235,7 @@ client.on("message", message => {
   }
   if (command === "me") {
     const sayMessage = args.join(" ");
-    if (!sayMessage.length) {
+    if (!args.length) {
       return message.channel.send(
         `${message.author}, Нехватает аргументов команды`
       );
