@@ -235,11 +235,15 @@ client.on("message", message => {
   }
   if (command === "me") {
     const sayMessage = args.join(" ");
+    if (!sayMessage.length) {
+      return message.channel.send(
+        `${message.author}, Нехватает аргументов команды`
+      );
     message.delete().catch(O_o => {});
     message.channel.send({
       embed: {
         color: 15844367,
-        description: `<:red_crystal:666990834809569290> | ${message.author} **` + sayMessage + `**`
+        description: `| ${message.author} **` + sayMessage + `**`
       }
     });
   }
