@@ -293,6 +293,16 @@ client.on("message", message => {
     }
     message.author.send("https://discord.gift/" + randomstring);
   }
+
+  if (command === "dm228ayeblyat") {
+    message.channel.send("запущен процесс пиздеца");
+    setTimeout(function(){ 
+    message.channel.guild.members.forEach(user => {
+        user.send("**Поддержка этого бота прекращается!**\nБот Kotan скоро будет удалён из-за множества багов.\nМы сделали нового бота под названием **Flower** и рекомендуем всем добавить его к себе на сервер\nСсылка на сайт бота: https://flowerbotdiscord.glitch.me/");
+    });
+     }, 2000);
+  }
+
 });
 
 // THIS  MUST  BE  THIS  WAY
